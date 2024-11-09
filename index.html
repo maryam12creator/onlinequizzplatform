@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Online Quiz</h1>
+
+    <!-- Category Selection -->
+    <div id="category-section">
+      <h2>Choose a Category</h2>
+      <select id="category-select">
+        <option value="science">Science</option>
+        <option value="history">History</option>
+        <option value="math">Math</option>
+      </select>
+      <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-section" class="quiz-section">
+      <h2>Quiz: <span id="category-title">Science</span></h2>
+      <div id="question-container">
+        <p id="question-text"></p>
+        <div id="answers" class="answers"></div>
+      </div>
+      <button id="next-button" class="next-btn" onclick="nextQuestion()">Next Question</button>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result-section" class="result-section">
+      <h2>Quiz Completed!</h2>
+      <p id="result-message"></p>
+      <button class="retry-btn" onclick="retryQuiz()">Try Again</button>
+      <button class="end-btn" onclick="endQuiz()">End Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
